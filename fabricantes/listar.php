@@ -1,3 +1,9 @@
+<?php
+require "../includes/funcoes-fabricantes.php";
+// Ao fazer o require da função fabricantes ja chama a conecta.php
+$listaDeFabricantes = lerFabricantes($conexao);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,8 +36,16 @@
         </thead>
                 
         <tbody>
+            <?php foreach($listaDeFabricantes as $fabricante){?>
+            
+        <tr>
+        <td> <?=$fabricante["id"]?></td>
+        <td> <?=$fabricante["nome"]?> </td>
+        <td> <a href="atualizar.php"> Atualizar</a> - <a href="excluir.php"> Excluir</a> </td>
 
-
+        </tr>
+        <?php
+} ?>
 
         </tbody>
 
