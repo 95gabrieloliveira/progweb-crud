@@ -40,7 +40,7 @@ if(isset($_POST['inserir'])) {
 	<form action="" method="post">
 	    <p>
             <label for="nome">Nome:</label>
-	        <input " type="text" name="nome" id="nome" required>
+	        <input  type="text" name="nome" id="nome" required>
         </p>
 
         <p>
